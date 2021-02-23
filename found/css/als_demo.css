@@ -1,0 +1,50 @@
+/********************************
+ * generic als elements styling
+ ********************************/
+.als-container {
+	position: relative;
+	width: 1200px;
+	height: 300px;
+	margin: 0px auto;
+	
+	
+	
+}
+
+.als-viewport {
+	position: relative;
+	overflow: hidden;
+	margin: 0px auto;	
+	
+	
+}
+
+.als-wrapper {
+	position: relative;
+	list-style: none;	
+	
+}
+
+.als-item {
+	position: relative;
+	display: block;	
+	text-align: center;	
+	cursor: pointer;
+	float: left;
+	margin: 0px 10px 10px;	
+}
+
+/************************
+ * specific als element
+ * styling for #lista2
+ ***********************/
+
+
+
+
+
+
+
+
+
+

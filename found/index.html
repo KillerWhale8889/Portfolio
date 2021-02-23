@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> F.ound </title>
+        
+        <link rel="stylesheet" href="css/als_demo.css" />      
+        
+
+
+       <style type="text/css">
+       body {margin:0; width: 100%; height: 100%; font-family:Arial, Helvetica, sans-serif; background-color: #e6e6e6; }
+       .wrap {width:1320px; height:2680px; position: relative; margin: auto; background-color: #fafafa;}
+       .date {width:146px; height:146px; background-color:#e6e6e6; position:absolute; top:20px; left:50px; text-align: center; font-size:40px; color:white;}
+       .logo {position: absolute; top:20px; left:400px;}
+       .nav {height: 30px; padding:0px; position:absolute; top:136px; left:270px;}       
+       .nav_li {display: inline; margin:0px 38px 0px 0px; color:#000000; font-size:20px;}       
+       .nav_li:hover {display: inline; margin:0px 38px 0px 0px; padding-bottom:5px; color:#000000; font-size:20px; border-bottom: solid 3px #000000; cursor: pointer;}
+       .search {width:250px; position: absolute; top:136px; left:1030px;}       
+       input::-webkit-search-decoration,
+       input::-webkit-search-cancel-button,
+       input::-webkit-search-results-button,
+       input::-webkit-search-results-decoration{display:none;}
+       input:focus {outline:none;}         
+       button:focus {outline:none;}  
+       .typing {width:200px; height:30px; background-color: #e6e6e6; float:left; margin-right:5px; padding-left:5px;}
+       .search_btn {width:34px; height:30px; padding:0px; margin:0px; background-image: url(images/search.jpg); cursor: pointer;}
+       .interview {width:630px; height:630px; border: solid 5px #e6e6e6; position:absolute; top:220px; left:50px; padding:10px; cursor:pointer;}
+       .news {width:490px; height:280px; border: solid 5px #e6e6e6; position:absolute; top:220px; left:750px; padding:10px; cursor:pointer;}
+       .store {width:490px; height:280px; border: solid 5px #e6e6e6; position:absolute; top:570px; left:750px; padding-top:10px; cursor:pointer;}
+       .tracks {width:1320px; height:401px; background-image:url(images/tracks.jpg); cursor: pointer; position:absolute; top:920px;}  
+       .f_tracks {font-size:55px; font-weight: 800; color:#ffffff; opacity: 0.65; text-align: right; padding-right:45px; margin-top:47px; line-height: 67px;}   
+       .art {width:1210px; height:600px; border: solid 5px #e6e6e6; position:absolute; top:1370px; left:50px; display: inline-flex; flex-wrap: wrap;}
+       .art_creative {width:590px; height:480px; border-right: solid 3px #e6e6e6; position: relative; top:50px; left:30px; text-align:center; padding-top:30px; cursor:pointer;}  
+       .art_visual {width:540px; height:235px; border-bottom: solid 3px #e6e6e6; position: relative; top:50px; left:54px; padding-top:15px; cursor:pointer;}  
+       .vmessage {width:240px; height:216px; position: absolute; left:300px; padding:0px;}   
+       .art_space {width:540px; height:190px; position: absolute; top:303px; left:647px; padding-top:60px; cursor:pointer;}
+       .a_space {width:290px; height:205px; position: absolute; padding:0px;} 
+       .life {width:1190px; height:580px; border: solid 5px #e6e6e6; position:absolute; top:2020px; left:50px; padding:10px;}
+       footer {width:1320px; height:120px; background-color: #e6e6e6;}    
+       hr{display:block; border: 0 none; border-top: 1px solid; border-bottom: 1px solid; width:500px; height:5px; margin-top: 50px; margin-left: 700px;}
+       .footer {text-align: center; margin-top: 30px; margin-left: 555px;}  
+       .hotstuff {width:1200px; text-align:center; font-size:38px; margin:60px auto; font-weight: 600; letter-spacing: -0.1rem; }    
+       .article {font-size:20px; font-weight:600; text-align: left; padding-left:35px;} 
+       .article_2 {text-align: right; padding-right:35px; margin-top:50px;}
+       .ordinary {text-align: center; padding:10px; padding-top:30px;}
+       .news_1 {padding-left:10px; margin-top:23px;}
+       .news_li {display:list-item; list-style; margin-bottom:5px;}
+       .news_li:hover {color:#b7a1c6;}       
+       .store_slide_1, .store_slide_2{list-style:none;}       
+       .store_slide_1{position:relative; text-align:center; margin:0}
+       .store_slide_2{position:absolute;left:0;right:0;top:0;bottom:0;opacity:0; animation:fade 12s infinite;}
+       .store_slide_2:nth-child(1){animation-delay:0s}
+       .store_slide_2:nth-child(2){animation-delay:2s}
+       .store_slide_2:nth-child(3){animation-delay:4s}
+       .store_slide_2:nth-child(4){animation-delay:6s}
+       .store_slide_2:nth-child(5){animation-delay:8s}
+       .store_slide_2:nth-child(6){animation-delay:10s}
+       
+     /* 100 / 8 = 12.5 */
+    @keyframes fade {
+      0% {opacity:0;}
+      5% {opacity:1;}
+      25% {opacity:1;}
+      30% {opacity:0;}
+      100% {opacity:0;}}
+
+       
+       
+       </style>
+       
+       <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.als-1.7.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() 
+			{
+				$("#lista2").als({
+					visible_items: 3,
+					scrolling_items: 3,
+					orientation: "horizental",
+          circular: "yes",                    
+					autoscroll: "yes",          
+          speed: 200
+
+				});				
+			});
+        </script>
+        
+    </head>
+
+    <body>
+        <div class="wrap">
+        <div class="date">
+            <p style="color:#000000; font-size:20px;">2020</p>
+            JAN
+        </div>
+
+        <div class="logo">
+            <img src="images/logo.png" width="480px">                         
+        </div>
+
+        <div class="nav">
+            
+            <li class="nav_li">NEWS</li>
+            <li class="nav_li">INTERVIEW</li>
+            <li class="nav_li">LIFE STYLE</li>
+            <li class="nav_li">ART</li>
+            <li class="nav_li">VARIOUS</li>
+            <li class="nav_li">STORE</li>
+            
+        </div>
+
+        <div class="search">        
+          <input type="search" class="typing" placeholder=" Search...">        
+          <button class="search_btn"></button>
+        </div>
+            
+        <div class="interview">
+            <p>Interview 〉 People</p>
+            <div class="ordinary">
+            <img src=images/ordinary.jpg>
+            <p class="article">Ordinary But Extraordinary</p>
+            <p class="article_2">가장 보통의 존재들. <br/> 그들의 일상에서 포착한 삶의 특별한 순간들.</p>
+            </div>
+        </div>    
+
+        <div class="news">
+            <p>News 〉 </p>
+            <div class="news_1">
+            
+                <li class="news_li">반스, ‘웰컴 투’ 시리즈의 다섯 번째 ...</li>
+                <li class="news_li">칼하트WIP×아일 스케이트보드, 콜라보레...</li>
+                <li class="news_li">브릭스톤, 2016 홀리데이 시즌 룩북 ...</li>
+                <li class="news_li">뉴발란스, 배우 류승범과 함께 한 NB ...</li>
+                <li class="news_li">브라운브레스 홍대점 리뉴얼 쇼케이스 성황...</li>
+                <li class="news_li">리복, 우먼스 캠페인의 새로운 모델 래퍼...</li>
+                <li class="news_li">브라운브레스, 홍대 스토어 리뉴얼 오픈...</li>
+                <li class="news_li">‘나이키×로스타 러닝 컬렉션’ 출시...</li>
+            
+            </div>
+            
+        </div>  
+            
+        <div class="store">
+            <p style="padding-left:10px;">Store 〉 </p>
+            <div class="store_slide">
+                    <ul class="store_slide_1">
+                      <li class="store_slide_2"><img src=images/store1.jpg ></li>
+                      <li class="store_slide_2"><img src=images/store2.jpg ></li>
+                      <li class="store_slide_2"><img src=images/store3.jpg ></li>
+                      <li class="store_slide_2"><img src=images/store4.jpg ></li>
+                      <li class="store_slide_2"><img src=images/store5.jpg ></li>
+                      <li class="store_slide_2"><img src=images/store6.jpg ></li>
+                    </ul>
+                  </div>
+        </div>    
+            
+        <div class="tracks">
+            <p class="f_tracks">F.OUND_TRACKS<br/>
+            #101</p>
+        </div> 
+            
+        <div class="art"> 
+                <p style="position:absolute; top:10px; left:20px;">Art 〉 Creative Spirits</p>
+                <p style="position:absolute; top:10px; left:645px;">Art 〉 Visual Message</p>
+                <p style="position:absolute; top:310px; left:645px;">Art 〉 Space</p>
+            <div class="art_creative">            
+            <img src=images/dawooni.jpg>
+            <p style="font-size:20px; font-weight:600;">The winner of creative spirits<br/>Dawooni Park</p>
+            </div>
+            
+            <div class="art_visual">
+                <img src="images/vm.jpg" align="left">
+                <div class="vmessage">
+                    <p style="font-weight:600; margin:0px;">사라지는 것, 잊혀지는 것</p>
+                    <p style="font-size:15px; text-align: justify;"> 1968년도에 고가차도로는 국내에서는 처음으로 세워진 아현 고가차도가 45년만인 2014년에 철거되었다.
+                        개인적인 추억이 많이 서려있던 서울의 또 다른 상징이 하나 더 역사 속으로 사라지게 되었다. 
+                        개발 이란 이름 아래 수없이 많은 것들이 없어지고 사라지고 잊혀지는 것을 반복하면서 그 속에 숨어있던 추억들도...</p>
+                </div>       
+            </div>
+            
+            <div class="art_space">
+                    <div class="a_space">
+                            <p style="font-weight:600; margin:0px;">부에노스아이레스에서 사랑에 빠질 확률(Medianeras, 2011)</p>
+                            <p style="font-size:15px; text-align: justify;"> 
+                                영화 <부에노스아이레스에서 사랑에 빠질 확률>의 원제목은 <측벽(Medianeras, 2011)>이다. 
+                                우리말 제목과 원제목의 차이가 너무 커서 제목만으로는 대체 어떤 내용의 영화인지 전혀 감을 잡을 수 없다. 
+                                영화는 건물 측벽을 이웃한 두개의 아파트 건물 작은 원룸에 사는 남자 마틴과 여자 마리아...</p>
+                        </div>
+                    <img src="images/medianeras.jpg" align="right">
+                              
+            </div>            
+        </div> 
+            
+        <div class="life">
+            <p style="text-align:right">Technology 〈 Life Style</p>
+            <div class="life_slide">                
+            <p class="hotstuff">The 8 Best things Ever<br/>
+            Hot Stuff</p>
+            <div id="lista2" class="als-container">
+				<div class="als-viewport">
+					<div class="als-wrapper">
+						<div class="als-item"><img src="images/hotstuff1.jpg"/></div>
+                        <div class="als-item"><img src="images/hotstuff2.jpg"/></div>
+                        <div class="als-item"><img src="images/hotstuff3.jpg"/></div>
+                        <div class="als-item"><img src="images/hotstuff4.jpg"/></div>
+                        <div class="als-item"><img src="images/hotstuff5.jpg"/></div>
+                        <div class="als-item"><img src="images/hotstuff6.jpg"/></div>
+                        <div class="als-item"><img src="images/hotstuff7.jpg"/></div>
+                        <div class="als-item"><img src="images/hotstuff8.jpg"/></div>                                  
+
+					</div>
+				</div>				
+			</div>    
+            
+            
+            </div>                        
+        </div>             
+            
+        </div> 
+        
+        <footer>
+        <hr>
+            <p class="footer"> Copyright 2016 FOUNDATION <br/>
+            All rights reserved.</p>
+        </footer>
+            
+            
+    
+    </body>
+</html>
+        
