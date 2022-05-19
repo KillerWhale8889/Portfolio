@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Time</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_chart.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jui-chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+<body> 
+    <script>
+        $(document).ready(function(){        
+            $('.time-cell').click(function(){
+                if($(this).hasClass('select')){
+                    $(this).removeClass('select');
+                } else {
+                    $(this).addClass('select');
+                }
+            });        
+        });
+    </script>
+
+      
+
+    <div id="reservePerformance" class="popup">
+        <div class="perf-container">
+        <article class="content-inner left">
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title">  
+                       Performance Check - Device List
+                    </div>
+                    <div class="popup-inner scroll">
+                    <table>
+                        <colgroup>
+                            <col width="5%">
+                            <col width="20%">
+                            <col width="15%">
+                            <col width="20%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead class="sticky">
+                        <tr>
+                            <th colspan="2">Device</th>
+                            <th>OS Ver</th>
+                            <th>Resolution</th>
+                            <th>State</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td>Y</td>
+                        </tr>   
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td><span>N</span></td>
+                        </tr>  
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td>Y</td>
+                        </tr>   
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td><span>N</span></td>
+                        </tr> 
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td>Y</td>
+                        </tr>   
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td><span>N</span></td>
+                        </tr> 
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td>Y</td>
+                        </tr>   
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td><span>N</span></td>
+                        </tr> 
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td>Y</td>
+                        </tr>   
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td><span>N</span></td>
+                        </tr> 
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td>Y</td>
+                        </tr>   
+                        <tr>
+                            <td>1</td>
+                            <td>Device3-1</td>
+                            <td>15.6.1</td>
+                            <td>1220*800</td>
+                            <td><span>N</span></td>
+                        </tr>   
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="cover-bar"></div>
+                </div>
+            </div>
+
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title"> Public Client Reservation List   
+                    </div>
+                    <div class="popup-inner scroll">
+                    <table>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="4%">
+
+                        </colgroup>
+                        <thead class="sticky">
+                        <tr>
+                            <th>Date</th>
+                            <th colspan="2">Client</th>
+                            <th>Phone</th>
+                            <th colspan="2">E-mail</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr><tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>   
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                            <td><div class="del-btn"></td>
+                        </tr>  
+                         
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="cover-bar"></div>
+                </div>
+            </div>
+        </article>
+
+        <article class="content-inner right">
+            <div class="common-bg">
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title">Reservation</div>
+                    <div class="popup-inner">                 
+                        <div class="datePick">
+                            <span>To Select a Date </span>
+                            <input type="date">
+                            <div class="detail-btn res-btn rtl-btn">Reservation</div>
+                        </div>
+                        <div class="time-table">
+                            <div class="time-cell">
+                                00:00
+                            </div>
+                            <div class="time-cell">
+                                00:30
+                            </div>
+                            <div class="time-cell">
+                                01:00
+                            </div>
+                            <div class="time-cell">
+                                01:30
+                            </div>
+                            <div class="time-cell">
+                                02:00
+                            </div>
+                            <div class="time-cell">
+                                02:30
+                            </div>
+                            <div class="time-cell">
+                                03:00
+                            </div>
+                            <div class="time-cell">
+                                03:30
+                            </div>
+                            <div class="time-cell">
+                                04:00
+                            </div>
+                            <div class="time-cell">
+                                04:30
+                            </div>
+                            <div class="time-cell">
+                                05:00
+                            </div>
+                            <div class="time-cell">
+                                05:30
+                            </div>
+                            <div class="time-cell">
+                                06:00
+                            </div>
+                            <div class="time-cell">
+                                06:30
+                            </div>
+                            <div class="time-cell">
+                                07:00
+                            </div>
+                            <div class="time-cell">
+                                07:30
+                            </div>
+                            <div class="time-cell">
+                                08:00
+                            </div>
+                            <div class="time-cell">
+                                08:30
+                            </div>
+                            <div class="time-cell">
+                                09:00
+                            </div>
+                            <div class="time-cell">
+                                09:30
+                            </div>
+                            <div class="time-cell">
+                                10:00
+                            </div>
+                            <div class="time-cell">
+                                11:30
+                            </div>
+                            <div class="time-cell">
+                                12:00
+                            </div>
+                            <div class="time-cell">
+                                12:30
+                            </div>
+                            <div class="time-cell">
+                                13:00
+                            </div>
+                            <div class="time-cell">
+                                13:30
+                            </div>
+                            <div class="time-cell">
+                                14:00
+                            </div>
+                            <div class="time-cell">
+                                14:30
+                            </div>
+                            <div class="time-cell">
+                                15:00
+                            </div>
+                            <div class="time-cell">
+                                15:30
+                            </div>
+                            <div class="time-cell">
+                                16:00
+                            </div>
+                            <div class="time-cell">
+                                16:30
+                            </div>
+                            <div class="time-cell">
+                                17:00
+                            </div>
+                            <div class="time-cell">
+                                17:30
+                            </div>
+                            <div class="time-cell">
+                                18:00
+                            </div>
+                            <div class="time-cell">
+                                18:30
+                            </div>
+                            <div class="time-cell">
+                                19:00
+                            </div>
+                            <div class="time-cell">
+                                19:30
+                            </div>
+                            <div class="time-cell">
+                                19:00
+                            </div>
+                            <div class="time-cell">
+                                19:30
+                            </div>
+                            <div class="time-cell">
+                                20:00
+                            </div>
+                            <div class="time-cell">
+                                20:30
+                            </div>
+                            <div class="time-cell">
+                                21:00
+                            </div>
+                            <div class="time-cell">
+                                22:30
+                            </div>
+                            <div class="time-cell">
+                                23:00
+                            </div>
+                            <div class="time-cell">
+                                23:30
+                            </div>
+                            <div class="time-cell">
+                                24:00
+                            </div>
+                        </div>
+                    </div>           
+             
+                              
+                </div>
+            </div>
+            </div>
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title"> Public Client Reservation List   
+                    </div>
+                    <div class="popup-inner scroll">
+                    <table>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="15%">
+                            <col width="15%">
+                        </colgroup>
+                        <thead class="sticky">
+                        <tr>
+                            <th>Date</th>
+                            <th colspan="2">Client</th>
+                            <th>Phone</th>
+                            <th>E-mail</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>   
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>   
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>Tmap M</td>
+                            <td>Name</td>
+                            <td>010-1234-1234</td>
+                            <td>abcdefghi@gmail.com</td>
+                        </tr>   
+                         
+                        </tbody>
+                    </table>
+                    <!-- <div class="detail-btn-area">
+
+                        <div class="detail-btn res-btn">OK</div>
+                        <div class="detail-btn cancel-btn">Cancel</div>
+                    </div> -->
+                    </div>
+                    <div class="cover-bar"></div>
+                     
+                </div>
+            </div>
+        </article>
+        </div>
+    </div>
+    <script src="js/custom_chart.js"></script>
+    <script src="js/popup.js"></script>
+  
+</body>
+</html>

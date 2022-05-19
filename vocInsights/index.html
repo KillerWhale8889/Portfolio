@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOC Insights</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_chart.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jui-core.js"></script>
+    <script src="js/jui-chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jui-ui.js"></script>
+   
+    
+    
+</head>
+<body>
+    <script>
+//     $( function() {
+//         $( ".poplayer" ).draggable();
+//         $('.close').on('click', function() {
+//             document.getElementsById("viewReviewContent").style.display='none';
+//     } )
+// });
+    </script>
+
+<script id="tpl_popover" type="text/template">
+    <div class="popover <!= position !> <!= color !>">
+        <div class="head">Subject</div>
+        <div class="body">
+            <div class="image"><i class="icon-caution"></i></div>
+            <div class="message"><!= message !></div>
+        </div>
+    </div>
+</script>
+
+
+    <div id="wrap">
+        <header>
+            <div class="logo">
+                VOC Insights
+            </div>
+            <div class="logo logo-title">
+                App name [OS ver]
+            </div>
+
+            <div class="user">  
+                <form>     
+                    <select>
+                        <option>Project List </option>
+                        <option>Project List1  </option>
+                        <option>Project List2  </option>
+                        <option>Project List3  </option>
+                    </select>             
+                </form> 
+              
+                <!-- <ul>                
+                    <li class="dropdown"><a href="#"><span>Project List<i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                    <ul>
+                        <li><a href="#">Project 1</a></li>
+                        <li class="dropdown"><a href="#">Project 2 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <ul>
+                            <li><a href="#">Project 2-1</a></li>
+                            <li><a href="#">Project 2-2</a></li>
+                            <li><a href="#">Project 2-3</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Project 3</a></li>
+                        <li><a href="#">Project 4</a></li>
+                    </ul>
+                    </li>
+                </ul> -->
+                <!-- <div> -->
+                <a href="dashboard2.html"><img src="images/icons/d1.png"></a>              
+                <a href="javascript:ViewList();"><div class="circle-a"></div><img src="images/icons/list_w.png"></a>
+                <a href="javascript:ViewAlert();"><div class="circle-b"></div><img src="images/icons/alert_w.png"></a>
+                <a href="javascript:ViewUser();"><img src="images/icons/people_w.png"></a>
+                <span>User Name </span>
+                <a href="javascript:void(0);" class="logout">Log out</a>
+                <!-- </div> -->
+            </div>
+        </header>
+
+        <div class="container">
+            <section class="content left">                
+                <article class="content-inner common-bg poc-tb"> 
+                    <!-- <div class="loadingbar"></div>  
+                    <div class="loading-bg"></div>     -->
+                    <div class="index-table-flex">                       
+                        <div class="index-table">                     
+                            <div class="content-title">                                
+                                <p>Top 5 Potential VOC</p>
+                            </div>
+                            <div class="table-inner scroll">
+                            <table>
+                                <colgroup>
+                                    <col width="18%">
+                                    <col width="12%">
+                                    <col width="14%">
+                                    <col width="14%">
+                                    <col width="14%">
+                                    <col width="14%"> 
+                                    <col width="14%">                     
+                                </colgroup>
+                                <thead class="sticky" >
+                                    <tr>
+                                        <th colspan="2">Type</th>  
+                                        <th>Device 1</th>
+                                        <th>Device 2</th>
+                                        <th>Device 3</th>
+                                        <th>Device 4</th>
+                                        <th>Device 5</th>            
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td rowspan="4" class="tb-bg">Function</td>
+                                    <td class="tb-bg">Crash</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="tb-bg">Install</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="tb-bg">Upgrade</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="tb-bg">ETC</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td rowspan="2" class="tb-bg">Innovation</td>
+                                    <td class="tb-bg">Usability</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="tb-bg">Feature</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr> 
+                                <tr>
+                                    <td rowspan="2" class="tb-bg">Innovation</td>
+                                    <td class="tb-bg">Usability</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="tb-bg">Feature</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr> 
+                                <tr>
+                                    <td rowspan="2" class="tb-bg">Innovation</td>
+                                    <td class="tb-bg">Usability</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="tb-bg">Feature</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr> 
+                                
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="cover-bar"></div>
+                        </div>                        
+                </article>
+
+                <article class="content-inner common-bg voc-tb">
+                    <div class="index-table-flex">
+                        <div class="index-table">
+                            <div class="content-title">
+                                <p>VOC Validation <span>37%</span> VOC Handling  <span>75%</span></p>                            
+                            </div>
+                            <div class="table-inner scroll">
+                            <table>
+                                <colgroup>
+                                    <col width="22%">
+                                    <col width="12%">
+                                    <col width="22%">   
+                                    <col width="22%">
+                                    <col width="22%">                 
+                                </colgroup>
+                                <thead class="sticky">
+                                <tr>
+                                    <th colspan="5">Device 3 - AOS - 15.2.8 > Function - Crash</th>
+                                </tr>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Error trace</th>
+                                    <th>Manual</th>    
+                                    <th>Automation</th>  
+                                    <th>VOC Handling</th>                   
+                                </tr>
+                                </thead>
+                                
+                                <tbody>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <!-- <td><a href="javascript:ViewErrorTrace();"><div class="doc"></div></a></td> -->
+                                    <td><a href="javascript:ViewManualHistory();">View Manual Popup</a></td>
+                                    <td><a>-</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td><a href="javascript:AddManualHistory();">Add Manual Popup</a></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href="javascript:ViewAutomationHistory();">View Automation Popup</a></td>
+                                    <td><a href="javascript:AddVocHistory();">Add VOC History</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a>-</a></td>
+                                    <td><a href="javascript:ModifyVocHistory();">Modify VOC History</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href="javascript:AddAutomationHistory();">Add Automation Popup</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href="javascript:ModifyManualHistory();">modifyManualHistory</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a>-</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a>-</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a>-</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a>-</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a>-</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a>-</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a href=""><img src="images/icons/document.png"></a></td>
+                                    <td>22.01.12 22:13:10</td>
+                                    <td><a>-</a></td>
+                                    <td><a>-</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="cover-bar"></div>
+                        </div>                        
+                    </div>
+                </article>
+
+                <article class="content-inner common-bg poc-tb2"> 
+                    <!-- <div class="loadingbar"></div>  
+                    <div class="loading-bg"></div>     -->
+                    <div class="index-table-flex">                       
+                        <div class="index-table">                     
+                            <div class="content-title">                                
+                                <p>Performance Monitoring</p>
+                                <div class="detail-btn dw-btn"> 
+                                    <img src="images/mtworks_dw.png">
+                                </div>
+                            </div>
+                            
+                            <div class="table-inner scroll">
+                            <table>
+                                <colgroup>
+                                    <col width="18%">
+                                    <col width="12%">
+                                    <col width="14%">
+                                    <col width="14%">
+                                    <col width="14%">
+                                    <col width="14%"> 
+                                    <col width="14%">                     
+                                </colgroup>
+                                <thead class="sticky" >
+                                    <tr>
+                                        <th colspan="2">Type</th>  
+                                        <th>Device 1</th>
+                                        <th>Device 2</th>
+                                        <th>Device 3</th>
+                                        <th>Device 4</th>
+                                        <th>Device 5</th>            
+                                    </tr>
+                                </thead>
+                                <tbody>
+                               
+                                    <tr class="pointer tb-bg performance">                              
+                                        <td rowspan="2" onclick="javascript:ViewPerformanceReport();">
+                                            <div>
+                                                <span>Performance</span>
+                                            </div>
+                                            <div class="detail-btn-area">
+                                                <!-- <button class="detail-btn res-btn" onclick="javascript:ReservePerformance();">Reserve</button> -->
+                                            </div> 
+                                        </td>
+                                        <td onclick="javascript:ResultPerformance();">App start time</td>
+                                        <td onclick="javascript:ResultPerformance();">22</td>
+                                        <td onclick="javascript:ResultPerformance();">22</td>
+                                        <td onclick="javascript:ResultPerformance();">22</td>
+                                        <td onclick="javascript:ResultPerformance();">22</td>
+                                        <td onclick="javascript:ResultPerformance();">22</td>
+                                    </tr>
+                                    <!-- <tr class="pointer tb-bg performance">
+                                        <td>Rendering Frame</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                    </tr> -->
+                                    <tr class="pointer tb-bg performance" onclick="javascript:ViewResponseTime();">
+                                        <td>Response time</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                        <td>22</td>
+                                
+                                    </tr>
+                                    
+                                    <tr class="pointer" onclick="javascript:ViewResourceTop5();" >
+                                        <td rowspan="3" class="tb-bg"> Resource</td>
+                                        <td class="tb-bg">CPU</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="pointer" onclick="javascript:ViewResourceTop5();">
+                                        <td class="tb-bg">Memory</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="pointer" onclick="javascript:ViewResourceTop5();">
+                                        <td class="tb-bg">Battery</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>                   
+                               
+                                
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="cover-bar"></div>
+                        </div>                        
+                </article>
+            </section>
+
+            
+
+            <section class="content">
+                <article class="content-inner common-bg scroll">
+                   
+                    <div class="index-table-flex">
+                        <div class="index-table">
+                            <div class="content-title">Analysis Potential VOC</div>
+                            <!-- <div uk-countdown="date: 2022-05-05T01:04:27+00:00">
+                                <span class="uk-countdown-number uk-countdown-days"></span>
+                                <span class="uk-countdown-separator">:</span>
+                                <span class="uk-countdown-number uk-countdown-hours"></span>
+                                <span class="uk-countdown-separator">:</span>
+                                <span class="uk-countdown-number uk-countdown-minutes"></span>
+                                <span class="uk-countdown-separator">:</span>
+                                <span class="uk-countdown-number uk-countdown-seconds"></span>
+                            </div> -->
+
+                            <!-- <div class="gooey"></div> -->
+                            <a href="javascript:DailyCrashTable();"> 
+                                                           
+                                <div id="crash_chart"></div>
+                                <!-- <div class="line"></div> -->
+                                
+                            </a>
+                        </div>
+                        
+                    </div>
+                </article>
+
+                <article class="content-inner common-bg">
+                    <h2 class="content-title">User Response</h2>
+                    <a href="javascript:UserReviewGrade();">
+                        <div class="index-table-flex">
+                            <div class="index-table">
+                                <h2 class="content-title2">Google Play</h2>
+                                <div id="g-grade"></div>
+                                <div id="g-graph"></div>
+                            </div>
+                            <div class="index-table">
+                                <h2 class="content-title2">App Store</h2>
+                                <div id="a-grade"></div>
+                                <div id="a-graph"></div>
+                                
+                            </div>
+                        </div>
+                    </a>
+
+                <div class="index-table2">  
+                <div class="content-inner2 scroll">   
+                    <div class="index-table-flex">
+                        <div class="index-table">                            
+                            <table class="pointer">
+                                <colgroup>
+                                    <col width="11%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="*%">
+                                    <col width="18%">
+                                    <col width="8%">
+                                </colgroup>
+                                
+                                <thead class="sticky">
+                                    <th>Time</th>
+                                    <th>Grade</th>
+                                    <th>Source</th>
+                                    <th colspan="2">Review</th>
+                                    <th>Device</th>
+                                    <th>OS ver.</th>
+                                </thead>
+                            
+                               
+                                <tbody>                                    
+                                <tr>
+                                    <td onclick="javascript:ViewTop5Review();" >22.01.01 18:44</td>
+                                    <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                                    <td>Google Play</td>
+                                    <td>Performance</td>
+                                    <td onclick="viewReviewContent.show()">말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111</td>
+                                    <td>Galaxy Note 21 Plus Ultra</td>
+                                    <td>15.4.21</td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.01 18:44</td>
+                                    <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                                    <td>Google Play</td>
+                                    <td>Performance</td>
+                                    <td onclick="viewReviewContent.show()">말줄임테스트테스트테스트테스트테스트테스트11111111111111111</td>
+                                    <td>Galaxy Note 21 Plus Ultra</td>
+                                    <td>15.4.21</td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.01 18:44</td>
+                                    <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                                    <td>Google Play</td>
+                                    <td>Performance</td>
+                                    <td onclick="viewReviewContent.show()">말줄임테스트테스트테스트테스트테스트테스트11111111111111111</td>
+                                    <td>Galaxy Note 21 Plus Ultra</td>
+                                    <td>15.4.21</td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.01 18:44</td>
+                                    <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                                    <td>Google Play</td>
+                                    <td>Performance</td>
+                                    <td onclick="viewReviewContent.show()">말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+                                        말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+                                        말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+                                        말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+                                        말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+                                        말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+                                        말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+                                        말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+                                        말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+                                    </td>
+                                    <td>Galaxy Note 21 Plus Ultra</td>
+                                    <td>15.4.21</td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.01 18:44</td>
+                                    <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                                    <td>Google Play</td>
+                                    <td>Performance</td>
+                                    <td onclick="viewReviewContent.show()">말줄임테스트테스트테스트테스트테스트테스트11111111111111111</td>
+                                    <td>Galaxy Note 21 Plus Ultra</td>
+                                    <td>15.4.21</td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.01 18:44</td>
+                                    <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                                    <td>Google Play</td>
+                                    <td>Performance</td>
+                                    <td onclick="viewReviewContent.show()">말줄임테스트테스트테스트테스트테스트테스트11111111111111111</td>
+                                    <td>Galaxy Note 21 Plus Ultra</td>
+                                    <td>15.4.21</td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.01 18:44</td>
+                                    <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                                    <td>Google Play</td>
+                                    <td>Performance</td>
+                                    <td onclick="viewReviewContent.show()">말줄임테스트테스트테스트테스트테스트테스트11111111111111111</td>
+                                    <td>Galaxy Note 21 Plus Ultra</td>
+                                    <td>15.4.21</td>
+                                </tr>
+                                <tr>
+                                    <td>22.01.01 18:44</td>
+                                    <td><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></td>
+                                    <td>Google Play</td>
+                                    <td>Performance</td>
+                                    <td onclick="viewReviewContent.show()">말줄임테스트테스트테스트테스트테스트테스트11111111111111111</td>
+                                    <td>Galaxy Note 21 Plus Ultra</td>
+                                    <td>15.4.21</td>
+                                </tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                       
+                    </div>
+                </div>   
+                    <div class="cover-bar"></div>  
+                </div>  
+                </article>
+            </section>
+        </div>
+    </div>
+
+    <script>
+    jui.ready([ "ui.window" ], function(win) {
+        viewReviewContent = win("#viewReviewContent", {
+            width: 500,
+            height: 300,
+            left: "40%",
+            top: "35%",
+            resize: false,
+            move: true
+        });
+    });
+    </script>
+    
+    <div id="viewReviewContent" class="msgbox common-bg">
+        <div class="head content-title">
+            Review Detail
+
+            <!-- <div class="deviceInfo">Device / OS</div> -->
+            <!-- <a href="#" class="close"><i class="icon-exit"></i></a> -->
+            <div id="closePopup" class="close"></div>
+        </div>
+        <div class="contents">
+            말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111말줄임테스트테스트테스트테스트테스트테스트11111111111111111
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/custom_chart.js"></script>
+    <script src="js/popup.js"></script>
+
+
+</body>
+</html>

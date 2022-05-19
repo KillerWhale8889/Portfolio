@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Time</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_chart.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.css">
+
+    <script src="js/jquery-1.8.0.min.js"></script>
+    <script src="js/jui-chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+</head>
+<body class="jui"> 
+      
+
+    <div id="resultPerformance" class="popup">
+        <div class="content-title ">[ Customer Name - App Name ]</div>
+        <div class="perf-container">
+        <article class="content-inner left">
+            
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title inner-title">Test Time List </div>                                             
+                        <form> 
+                            <input type="date" id="startDate" name="startDate"/> ~    
+                            <input type="date" id="endDate" name="endDate"/>  
+                            <div class="detail-btn srch-btn">Search</div>     
+                            <!-- <select>
+                                <option>OS </option>
+                                <option>AOS </option>
+                                <option>iOS</option>
+                            </select>              -->
+                        </form>
+                  
+                    <div class="popup-inner scroll">
+                    <table>
+                        <colgroup>
+                            <col width="50%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead class="sticky">
+                        <tr>
+                            <th>Date</th>
+                            <th>Device1</th>
+                            <th>Device2</th>
+                            <th>Device3</th>
+                            <th>Device4</th>
+                            <th>Device5</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr>   
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                            <td>3.5</td>
+                        </tr>   
+                       
+                        
+                        </tbody>
+                    </table>
+                    <!-- <div class="cover-bar-x"></div> -->
+                    </div>
+                    <div class="cover-bar"></div>
+                    
+                </div>
+            </div>
+
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title inner-title">
+                        Test Scenario List</div>         
+            
+                    <div class="popup-inner scroll scroll-x">
+                    <table>
+                        <colgroup>
+                            <col width="50%">
+                            <col width="40%">
+                            <col width="10%">
+                        </colgroup>
+                        <thead class="sticky">
+                        <tr>
+                            <th>Date</th>
+                            <th>Scenario Name</th>
+                            <th>Screen</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr>   
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr>  
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        <tr>
+                            <td>2022.04.27 13:00</td>
+                            <td>로그인</td>
+                            <td>22</td>
+                        </tr> 
+                        
+                                       
+                        </tbody>
+                        
+                    </table>
+                    <!-- <div class="cover-bar-x"></div> -->
+                    </div>
+                    <div class="cover-bar"></div>
+                    
+                </div>
+            </div>
+
+        </article>
+
+        <article class="content-inner right">
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title inner-title">Analysis Potential VOC
+                        <!-- <form>     
+                            <select>
+                                <option>App Start Time </option>
+                                <option>Response Time </option>
+                            </select>             
+                        </form> -->
+                       
+                    </div>
+                    
+                    <div id="appStartTimeResult"></div>
+                </div>
+            </div>
+            <!-- <div id="chart_tooltip" class="popover popover-top">
+                <div class="head">Sales & Profit Tooltip</div>
+                <div class="body">
+                    <div class="image"><i class="icon-caution"></i></div>
+                    <div class="message"></div>
+                </div>
+            </div> -->
+
+        </article>
+        </div>
+    </div>
+    <script src="js/custom_chart.js"></script>
+    <script src="js/popup.js"></script>
+  
+</body>
+</html>

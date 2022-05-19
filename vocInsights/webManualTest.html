@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Manual Test</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_chart.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/webmanual_test.css">
+
+    <!-- UIkit CSS -->
+    <!-- <link rel="stylesheet" href="css/uikit.min.css" /> -->
+
+    <!-- UIkit JS -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    
+
+    <script src="js/jui-chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+    <script>
+
+        UIkit.util.ready(function () {
+    
+            var bar = document.getElementById('install-progressbar');
+    
+            var animate = setInterval(function () {
+    
+                bar.value += 10;
+    
+                if (bar.value >= bar.max) {
+                    clearInterval(animate);
+                }
+    
+            }, 1000);
+    
+        });
+
+        $("input:checkbox[name='run']").prop("checked", true);
+    
+    </script>
+
+      <div id="webManualTest" class="popup">
+        <article class="content-inner">
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title">Device 3 - AOS - 15.2.8
+                      
+                    </div>
+                    <div class="test-container">
+                        <aside>
+                            <div class="side-nav common-bg">                         
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <div class="heading">
+                                            <img src="images/icons/installapp.png">
+                                            Install the App
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="test-btn-detail content">
+                                            <div>
+                                                <input type="text" autofocus readonly>
+                                            </div>
+                                            <div>                                                
+                                                <input id="checkbox" type="checkbox" name="run" value="run"/>
+                                                <span class="smtxt">앱 바로 실행</span>
+                                            </div>
+                                            <div class="detail-btn-area">
+                                                <div class="detail-btn search-btn">찾아보기</div>
+                                                <div class="detail-btn install-btn">설치시작</div>
+                                            </div>     
+                                            <progress id="install-progressbar" value="" min="0" max="100"></progress>                                           
+                                        </div>
+                                    </div>
+                                
+                                    <div class="accordion-item">
+                                        <div class="heading">
+                                            <img src="images/icons/input.png">
+                                            Text Input
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="test-btn-detail content">
+                                            <p class="smtxt">(0/150)</p>
+                                            <textarea autofocus></textarea>
+                                            <div class="detail-btn-area">
+                                                <div class="detail-btn submit-btn">Submit</div>
+                                            </div>                                               
+                                        </div>
+                                    </div>
+                                
+                                    <div class="accordion-item">
+                                        <div class="heading">
+                                            <img src="images/icons/app.png">
+                                            Run the App
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="test-btn-detail content">
+                                            <p class="smtxt">Package Name</p>
+                                            <textarea autofocus></textarea>
+                                            <div class="detail-btn-area">
+                                                <div class="detail-btn submit-btn">Run</div>
+                                            </div>                                              
+                                        </div>
+                                    </div>
+                                
+                                    <div class="accordion-item">
+                                        <div class="heading">
+                                            <img src="images/icons/url.png">
+                                            Enter URL
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="test-btn-detail content">
+                                            <textarea autofocus></textarea>
+                                            <div class="detail-btn-area">
+                                                <div class="detail-btn submit-btn">Open</div>
+                                            </div>                                              
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <div class="heading">
+                                            <img src="images/icons/preferences.png">     
+                                            Preferences
+                                            <div class="icon"></div>
+                                        </div>
+                                        <div class="test-btn-detail content">
+                                            <div class="detail-btn-area">
+                                                <div class="detail-btn pref-btn"> Language</div>
+                                                <div class="detail-btn pref-btn"> Sounds</div>
+                                                <div class="detail-btn pref-btn"> Accounts</div>
+                                                <div class="detail-btn pref-btn"> Location</div>
+                                                <div class="detail-btn pref-btn"> Display</div>
+                                                <div class="detail-btn pref-btn"> Wi-fi</div>
+                                            </div>
+                                        </div> 
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="heading">
+                                            <img src="images/icons/delete.png">     
+                                            Delete the App
+                                        </div>
+                                    </div>
+
+
+                                     
+                                </div>
+                            
+                            
+                            </div>
+                            <div class="side-link common-bg">
+                                <ul>
+                                    <li>
+                                        Log/Resource Monitoring
+                                    </li>
+                                </ul>  
+                            </div>
+                        </aside>
+
+                        <section class="content">
+
+                            <article class="content-inner">
+                                <div class="detail-table-area">
+                                    <div class="device-area">
+                                        <img src="images/sample.jpg">
+                                    </div>
+                                </div>
+
+                                
+                                <div class="buttons-container">
+                                    <ul uk-margin>
+                                        <li class="uk-button uk-button-primary">
+                                            <img src="images/icons/home.png">
+                                        </li>
+                                        <li class="uk-button uk-button-primary">
+                                            <img src="images/icons/back.png">
+                                        </li>
+                                        <li class="uk-button uk-button-primary">
+                                            <img src="images/icons/sound.png">
+                                        </li>
+                                        <li class="uk-button uk-button-primary">
+                                            <img src="images/icons/wake.png">
+                                        </li>
+                                        <li class="uk-button uk-button-primary">
+                                            <img src="images/icons/refresh.png">
+                                        </li>
+                                        <li class="uk-button uk-button-primary">
+                                            <img src="images/icons/wide.png">
+                                        </li>
+                                    </ul>
+                                </div>                        
+                                
+                            </article>
+                            
+                        </section>
+                    </div>
+
+                </div>
+               
+              
+            </div>
+        </article>
+    </div>  
+
+    <script src="js/custom_chart.js"></script>
+    <script src="js/popup.js"></script>
+  
+</body>
+</html>

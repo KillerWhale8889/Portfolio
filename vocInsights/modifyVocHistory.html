@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoC History</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_chart.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jui-chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+        
+    <div id="modifyVocHistory" class="popup">
+        <article class="content-inner">
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title">
+                      Device3 - AOS - 15.2.8 > Function - Install > 2022.01.12 21:21:21
+                        <!-- <div id="closePopup" class="close"></div> -->
+                    </div>
+                    <div class="popup-inner scroll">
+                    <table>
+                        <colgroup>
+                            <col width="5%">
+                            <col width="15%">
+                            <col width="8%">
+                            <col width="12%"> 
+                            <col width="16%">
+                            <col width="8%">   
+                            <col width="36%">    
+                        </colgroup>
+                        <thead class="sticky">
+                        <tr>
+                            <th>Edit</th>
+                            <th>Time</th>
+                            <th>State</th>
+                            <th>Name</th>
+                            <th>VoC Information</th>
+                            <th colspan="3">VoC Handling</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>                            
+                            <td rowspan="3"><img src="images/icons/editing.png"></td>
+                            <td rowspan="3">22.01.12 21:13</td>
+                            <td rowspan="3">
+                                <form> 
+                                    <select>
+                                        <option>State </option>
+                                        <option>On</option>
+                                        <option>Off</option>
+                                    </select>            
+                                </form> 
+                            </td>
+                            <td>상황실</td>
+                            <td>Device3 - AOS - 15.2.8</td>
+                            <td>발생현상</td>
+                            <td>
+                                <textarea>안드로이드 단말기에서 버전 충돌로 인한 인스톨 불가현상 발생 참고로 22.12.21 03:00 모바일운영1담당에서 변경관리가 실행되었음</textarea>
+                            </td>
+                            <td rowspan="3"><div class="del-btn"></div></td>
+                        </tr>  
+                        
+                        <tr>    
+                          <td>전시품질관리팀</td>
+                          <td>Function</td>
+                          <td>영향도</td>
+                          <td>
+                            <textarea>AOS 전체 단말기에서 버전 체크 후 인스톨 불가로 서비스 이용 불가 IOS 전체 단말기에서는 정상적인 서비스 가능</textarea>
+                          </td>
+                       </tr> 
+  
+                       <tr>    
+                          <td>한석봉</td>
+                          <td>Install</td>
+                          <td>공지사항</td>
+                          <td>
+                            <textarea>홈페이지 공지 후 구로/부산/대구 상담실에 통보하여 고객 대응하도록 조치함 서비스는 22.01.12.22:30 신규 앱 배포 후 정상가동 예정</textarea>
+                          </td>
+                          
+                       </tr>
+                                                
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>  
+
+
+
+    <script src="js/custom_chart.js"></script>
+    <script src="js/popup.js"></script>
+  
+</body>
+</html>

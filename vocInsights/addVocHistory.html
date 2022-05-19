@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoC History</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_chart.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jui-chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+        
+    <div id="addVocHistory" class="popup">
+        <article class="content-inner">
+             <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title">
+                      Device3 - AOS - 15.2.8 > Function - Install > 2022.01.12 21:21:21
+                        <!-- <div id="closePopup" class="close"></div> -->
+                    </div>
+                    <div class="popup-inner scroll">
+                    <table>
+                        <colgroup>
+                            <col width="5%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="15%"> 
+                            <col width="20%">
+                            <col width="10%">   
+                            <col width="30%">    
+                        </colgroup>
+                        <thead class="sticky">
+                        <tr>
+                            <th>Edit</th>
+                            <th>Time</th>
+                            <th>State</th>
+                            <th>Name</th>
+                            <th>VoC Information</th>
+                            <th colspan="2">VoC Handling</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>                            
+                            <td rowspan="3"><img src="images/icons/add.png"></td>
+                            <td rowspan="3">22.01.12 21:13</td>
+                            <td rowspan="3">
+                                <form> 
+                                    <select>
+                                        <option>State </option>
+                                        <option>On</option>
+                                        <option>Off</option>
+                                    </select>            
+                                </form> 
+                            </td>
+                            <td>상황실</td>
+                            <td>Device3 - AOS - 15.2.8</td>
+                            <td>발생현상</td>
+                            <td>
+                                <textarea></textarea>
+                              </td>
+                        </tr>  
+                        
+                        <tr>    
+                          <td>전시품질관리팀</td>
+                          <td>Function</td>
+                          <td>영향도</td>
+                          <td>
+                            <textarea></textarea>
+                            </td>
+                       </tr> 
+  
+                       <tr>    
+                          <td>한석봉</td>
+                          <td>Install</td>
+                          <td>공지사항</td>
+                          <td>
+                              <textarea></textarea>
+                            </td>
+                       </tr>
+
+                       
+                                                
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>    
+
+
+
+    <script src="js/custom_chart.js"></script>
+    <script src="js/popup.js"></script>
+  
+</body>
+</html>

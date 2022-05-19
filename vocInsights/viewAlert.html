@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert List</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_chart.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jui-chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+        
+        <div id="viewAlert" class="popup">
+            <article class="content-inner">
+                <div class="index-table-flex">
+                    <div class="index-table">
+                        <div class="content-title">Alerts and Alarms
+                            <!-- <div id="closePopup" class="close"></div> -->
+                        </div>
+                        <div class="popup-inner scroll">
+                        <table>
+                            <colgroup>
+                                <col width="10%">
+                                <col width="5%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="8%">
+                                <col width="18%">
+                                <col width="33%">
+                                <col width="5%">
+                                <col width="5%">
+                            </colgroup>
+                           <thead class="sticky">
+                            <tr>
+                                <th>Type</th>
+                                <th>Sort</th>
+                                <th>Time</th>
+                                <th>Count</th>
+                                <th>Object</th>
+                                <th>Occurrence</th>
+                                <th>Message</th>
+                                <th>Alert</th>
+                                <th>Alarm</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Performance</td>
+                                <td>경고</td>
+                                <td>30분</td>
+                                <td>10번</td>
+                                <td>복수 단말기</td>
+                                <td>복수 단말기에서 30분간 같은 증상이 10번 이상 반복</td>
+                                <td>(App Name)의 (Device)에서 성능 문제가 식별 되었습니다.</td>
+                                <td>O</td>
+                                <td>O</td>
+                            </tr>                        
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+
+
+
+    <script src="js/custom_chart.js"></script>
+    <script src="js/popup.js"></script>
+  
+</body>
+</html>

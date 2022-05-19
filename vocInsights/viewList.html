@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View List</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_chart.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jui-chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- cdn for modernizr, if you haven't included it already -->
+    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+    <!-- polyfiller file to detect and load polyfills -->
+    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+
+</head>
+<body>
+    <script>
+        webshims.setOptions('waitReady', false);
+        webshims.setOptions('forms-ext', {types: 'date'});
+        webshims.polyfill('forms forms-ext');
+    </script>
+
+    <!-- input에 오늘날짜 기본값으로 넣기 -->
+    <script type="text/javascript">
+        window.onload = function() {
+            today = new Date();
+            today = today.toISOString().slice(0, 10);
+            bir = document.getElementById("today");
+            bir.value = today;
+        }
+    </script>
+
+    <div id="viewList" class="popup">
+        <article class="content-inner">
+            <!-- <div class="loadingbar"></div> 
+            <div class="loading-bg"></div>  -->
+            <div class="index-table-flex">
+                <div class="index-table">
+                    <div class="content-title">
+                        <form> 
+                            
+                            <input type="date" id="today">
+
+                            <select>
+                                <option>Type</option>
+                                <option>Function</option>
+                                <option>Performance</option>
+                                <option>Resource</option>
+                                <option>Innovation</option>
+                            </select>
+
+                            <select>
+                                <option>Type Detail</option>
+                                <option>Crash</option>
+                                <option>Install</option>
+                                <option>Upgrade</option>
+                                <option>ETC</option>
+                            </select>
+
+                            <select>
+                                <option>State</option>
+                                <option>On</option>
+                                <option>Off</option>
+                            </select>
+
+                            <select>
+                                <option>Name</option>
+                                <option>한석봉</option>
+                                <option>유관순</option>
+                            </select>
+                             <!-- <div id="closePopup" class="close"></div> -->
+                        </form>   
+                        
+                    </div>
+                    <div class="popup-inner scroll">
+                    <table>
+                        <colgroup>
+                            <col width="15%">
+                            <col width="5%">
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <thead class="sticky">
+                        <tr>
+                            <th>Time</th>
+                            <th>State</th>
+                            <th>Name</th>
+                            <th>VOC Information</th>
+                            <th colspan="2">VOC Handling</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>22.01.12 21:13</td>
+                            <td>종료</td>
+                            <td>모바일운영1담당</td>
+                            <td>Device3-AOS-15.2.8</td>
+                            <td>발생현상</td>
+                            <td>줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트줄바꿈테스트</td>
+                        </tr>                        
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+
+
+
+    <script src="js/custom_chart.js"></script>
+    <script src="js/popup.js"></script>
+  
+</body>
+</html>

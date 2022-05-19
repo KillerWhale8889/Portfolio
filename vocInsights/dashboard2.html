@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOC Insights</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_chart.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jui-chart.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    
+    
+</head>
+<body>
+
+    <div id="wrap2">
+        <header>
+            <div class="logo">
+                VOC Insights
+            </div>
+            <!-- <nav class="top-nav">
+                <ul>
+                    <li>
+                        <a class="link" href="javascript:void(0);"></a>
+                    </li>
+                    <li>
+                        <a class="link" href="javascript:void(0);"></a>
+                    </li>
+                    <li>
+                        <a class="link" href="javascript:void(0);"></a>
+                    </li>
+                    <li>
+                        <a class="link" href="javascript:void(0);"></a>
+                    </li>
+                </ul>
+            </nav> -->
+            <div class="logo">
+                App name [OS ver]
+            </div>
+
+            <div class="user">     
+                <a href="index.html"><img src="images/icons/d2.png"></a>           
+                <a href="javascript:ViewList();"><div class="circle-a"></div><img src="images/icons/list_w.png"></a>
+                <a href="javascript:ViewAlert();"><div class="circle-b"></div><img src="images/icons/alert_w.png"></a>
+                <a href="javascript:ViewUser();"><img src="images/icons/people_w.png"></a>
+                <span>User Name </span>
+                <a href="javascript:void(0);" class="logout">Log out</a>
+            </div>
+        </header>
+
+        <div class="container">
+            <section class="content">
+                <article class="content-inner common-bg">
+                    <div class="index-table-flex">
+                        <div class="index-table">
+                            <div class="content-title">                                               
+                                <!-- <form> 
+                                    <select>
+                                        <option>통합 </option>
+                                        <option>Function </option>
+                                        <option>VoC handling</option>
+                                        <option>User Response</option>
+                                    </select>             
+                                </form> -->
+                                Quality Management
+                                <!-- <div id="closePopup" class="close"></div> -->
+                            </div>  
+        
+                            <div id="total_chart"></div>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/custom_chart.js"></script>
+    <script src="js/popup.js"></script>
+
+
+</body>
+</html>
