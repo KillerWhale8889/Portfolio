@@ -1,0 +1,499 @@
+/* chart */
+
+
+#crash_chart svg {
+    height: calc(42vh - 3rem);;
+    background: none !important;
+    min-height: 362px;
+}
+
+#crash_chart .grid-date line,
+#crash_chart .grid-range line,
+#g-grade .grid-date line,
+#g-grade .grid-range line,
+#g-graph .grid-block line,
+#g-graph .grid-block g line,
+#g-graph .grid-range line,
+#a-grade .grid-date line,
+#a-grade .grid-range line,
+#a-graph .grid-block line,
+#a-graph .grid-range line,
+#cpu_chart .grid-date line,
+#cpu_chart .grid-range line,
+#memory_chart .grid-date line,
+#memory_chart .grid-range line,
+#network_chart .grid-date line,
+#network_chart .grid-range line,
+#weeklyPerformanceReport .grid-fullblock line,
+#weeklyPerformanceReport .grid-range line,
+#time_resource .grid-fullblock line,
+#time_resource .grid-range line,
+#review_grade .grid-fullblock line,
+#review_grade .grid-range line,
+#memory_chart .grid-date line,
+#memory_chart .grid-range line,
+#network_chart .grid-date line,
+#network_chart .grid-range line,
+#total_chart .grid-block line,
+#total_chart .grid-range line,
+#responseTime_chart .grid-fullblock line,
+#responseTime_chart .grid-range line{
+    stroke:#e2e2e2;
+}
+
+#g-grade, #a-grade {
+    width: 30%;
+    text-align: center;
+}
+#g-graph, #a-graph {
+    width: 70%;
+}
+
+#g-graph g path:nth-child(1),
+#a-graph g path:nth-child(1) {
+    fill: #3366ff;
+}
+
+#g-graph g path:nth-child(2),
+#a-graph g path:nth-child(2) {
+    fill: #6690ff;
+}
+
+#g-graph g path:nth-child(3),
+#a-graph g path:nth-child(3) {
+    fill: #84a9ff;
+}
+
+#g-graph g path:nth-child(4),
+#a-graph g path:nth-child(4) {
+    fill: #adc8ff;
+}
+
+#g-graph g path:nth-child(5),
+#a-graph g path:nth-child(5) {
+    fill: #d6e4ff;
+}
+
+#g-grade svg g .brush-fullgauge g:nth-child(2) path,
+#a-grade svg g .brush-fullgauge g:nth-child(2) path {
+    stroke: #fffad6;
+}
+
+/* Top5 Device Resource */
+#cpu_resource svg g .brush-bargauge > g rect:nth-child(1),
+#memory_resource svg g .brush-bargauge > g rect:nth-child(1),
+#network_resource svg g .brush-bargauge > g rect:nth-child(1){
+    fill: #fafafa;
+}
+
+
+#cpu_resource svg g .brush-bargauge > g rect,
+#memory_resource svg g .brush-bargauge > g rect,
+#network_resource svg g .brush-bargauge > g rect{
+    rx: .4rem;
+    ry: .4rem;
+}
+
+
+/* weeklyPerformanceReport */
+#weeklyPerformanceReport svg,
+#monthlyPerformanceReport svg,
+#appStartTime_chart  {
+    width: calc(100vw - 4rem);
+    height: 80vh;
+}
+
+#weeklyPerformanceReport .brush-area path,
+#monthlyPerformanceReport .brush-area path {
+    fill: linear-gradient(#02BC77, transparent);
+    background: linear-gradient(#02BC77, transparent);
+    color : linear-gradient(#02BC77, transparent);
+}
+/* 
+#weeklyPerformanceReport .brush-area path:nth-child(2) {
+    fill: linear-gradient(#02BC77, transparent);
+    background: linear-gradient(#02BC77, transparent);
+}
+
+#weeklyPerformanceReport .brush-area path:nth-child(2) {
+    fill: linear-gradient(#02BC77, transparent);
+    background: linear-gradient(#02BC77, transparent);
+} */
+
+/* Top5 device */
+
+#cpu_resource svg, #memory_resource svg, #network_resource svg{
+    width: 32vw;
+    height: 100%;
+}
+
+#time_resource svg {
+    width: calc(99vw - 4rem);
+    height: calc(60vh - 4rem);
+}
+
+/*view manual resource */
+
+#cpu_chart svg, #memory_chart svg, #network_chart svg {
+    width: calc(20vw - 4rem);
+    height: calc(40vh - 4rem);
+}
+
+/* review grade */
+
+#review_grade svg {
+    width: calc(100vw - 4rem);
+    height: 83vh;
+}
+
+/* #review_grade svg g > rect {
+ margin: 1rem 0
+} */
+
+
+
+
+
+@-webkit-keyframes progress1 {
+    0% {
+      -webkit-transform: scalex(0);
+              transform: scalex(0);
+      opacity: .5;
+    }
+    90% {
+      -webkit-transform: scalex(1);
+              transform: scalex(1);
+      opacity: 1;
+    }
+    92% {
+      -webkit-transform: scalex(1);
+              transform: scalex(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scalex(1);
+              transform: scalex(1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes progress1 {
+    0% {
+      -webkit-transform: scalex(0);
+              transform: scalex(0);
+      opacity: .5;
+    }
+    90% {
+      -webkit-transform: scalex(1);
+              transform: scalex(1);
+      opacity: 1;
+    }
+    92% {
+      -webkit-transform: scalex(1);
+              transform: scalex(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scalex(1);
+              transform: scalex(1);
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes progress2 {
+    0% {
+      -webkit-transform: scale(0.3, 0.8) translatez(0);
+              transform: scale(0.3, 0.8) translatez(0);
+      opacity: 0;
+    }
+    90% {
+      -webkit-transform: scale(1, 1) translatex(100%) translatez(0);
+              transform: scale(1, 1) translatex(100%) translatez(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1, 1) translatex(100%) translatez(0);
+              transform: scale(1, 1) translatex(100%) translatez(0);
+      opacity: 0;
+    }
+  }
+  @keyframes progress2 {
+    0% {
+      -webkit-transform: scale(0.3, 0.8) translatez(0);
+              transform: scale(0.3, 0.8) translatez(0);
+      opacity: 0;
+    }
+    90% {
+      -webkit-transform: scale(1, 1) translatex(100%) translatez(0);
+              transform: scale(1, 1) translatex(100%) translatez(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1, 1) translatex(100%) translatez(0);
+              transform: scale(1, 1) translatex(100%) translatez(0);
+      opacity: 0;
+    }
+  }
+  .line {
+    position: relative;
+    top: -92.3%;
+    width: 98.6%;
+    height: 1%;
+    padding-left: 3rem;
+   }
+
+  .line:before {
+    -webkit-animation: progress1 5s infinite;
+            animation: progress1 5s infinite;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    content: "";
+    display: block;
+    height: 100%;
+    background: linear-gradient(to right, rgba(214, 228, 255, 0.1) 10%, rgba(214, 228, 255, 0.3) 100%, white);
+  }
+  
+  /* .line:after {
+    content: "";
+    position: absolute;
+    -webkit-animation: progress2 5s infinite;
+            animation: progress2 5s infinite;
+    -webkit-transform-origin: 90% 50%;
+            transform-origin: 90% 50%;
+    margin-left: -24px;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background: rgba(236, 236, 236, 0.55);
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+    box-shadow: 0 0 10px 6px rgba(214, 228, 255, 0.4), -20px 0 15px 4px rgba(214, 228, 255, 0.3), -40px 0 15px 2px rgba(214, 228, 255, 0.2), -60px 0 10px 1px rgba(214, 228, 255, 0.1), -80px 0 10px 1px rgba(214, 228, 255, 0.05);
+  }
+   */
+
+
+
+   @property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+  
+  
+  :root {
+      --d: 6000ms;
+      --angle: 90deg;
+      --gradX: 100%;
+      --gradY: 50%;
+      --c1: rgba(214, 228, 255, 1);
+      --c2: rgba(255, 255, 255, 1);
+  }
+  
+  
+  .box {   
+        box-sizing: border-box;   
+        border: 0.5rem solid;
+        border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+        animation: borderRotate var(--d) linear infinite forwards;
+  }
+  
+  @keyframes borderRotate {
+      100% {
+          --angle: 420deg;
+      }
+  }
+  
+  @keyframes borderRadial {
+      20% {
+          --gradX: 100%;
+          --gradY: 50%;
+      }
+      40% {
+          --gradX: 100%;
+          --gradY: 100%;
+      }
+      60% {
+          --gradX: 50%;
+          --gradY: 100%;
+      }
+      80% {
+          --gradX: 0%;
+          --gradY: 50%;
+      }
+      100% {
+          --gradX: 50%;
+          --gradY: 0%;
+      }
+  }
+
+
+/* dashboard2 chart */
+
+#total_chart svg{
+  height: calc(88vh - 4rem);
+  background: none !important;
+  min-height: 734px;
+}
+
+#total_chart svg .brush-column circle {
+  r: 0;
+}
+
+#total_chart svg .brush-column g, #total_chart svg .brush-line g {
+  visibility: visible;
+}
+
+#total_chart  svg  .brush-line:nth-child(28)  g  path {
+  stroke-dasharray: none;
+}
+
+#total_chart svg .brush-line text {
+  transform: translate(1.2rem, -1.3rem);
+}
+
+#total_chart svg .brush-line circle {
+  r: 2;
+}
+
+
+#total_chart svg g .widget-legend circle {
+  r: 5;
+  cy: -4;
+}
+
+#total_chart svg g .widget-legend:nth-child(2) {
+  transform: translate(87.3rem, 1.29rem);
+}
+
+#total_chart svg g .widget-legend:nth-child(3) {
+  transform: translate(81.3rem, 1.29rem);
+}
+
+
+#time_resource1 , #time_resource2, #time_resource3 , 
+#time_resource4, #time_resource5 , #time_resource6,
+#time_resource7 , #time_resource8, #time_resource9 , 
+#time_resource10, #time_resource11 , #time_resource12,
+#time_resource13 , #time_resource14, #time_resource15 , 
+#time_resource16, #time_resource17 , #time_resource18,
+#time_resource19 , #time_resource20, #time_resource21 , 
+#time_resource22, #time_resource23 , #time_resource24 {
+  width: 4vw;
+  height: calc(60vh - 4rem);
+}
+
+.timeChart {
+  width: calc(99vw - 4rem);
+  height: calc(60vh - 4rem);
+  display: flex;
+}
+
+#time_resource2 .grid-range, #time_resource3 .grid-range,
+#time_resource4 .grid-range, #time_resource5 .grid-range,
+#time_resource6 .grid-range, #time_resource7 .grid-range,
+#time_resource8 .grid-range, #time_resource9 .grid-range,
+#time_resource10 .grid-range, #time_resource11 .grid-range,
+#time_resource12 .grid-range, #time_resource13 .grid-range,
+#time_resource14 .grid-range, #time_resource15 .grid-range,
+#time_resource16 .grid-range, #time_resource17 .grid-range,
+#time_resource18 .grid-range, #time_resource19 .grid-range,
+#time_resource20 .grid-range, #time_resource21 .grid-range,
+#time_resource22 .grid-range, #time_resource23 .grid-range,
+#time_resource24 .grid-range {
+  visibility: hidden;
+}
+
+#responseTime_chart svg{
+  min-height: 478px;
+}
+
+#appStartTimeResult svg {
+  min-height: 754px;
+}
+
+#appStartTimeResult svg .grid-fullblock g text { 
+  font-size: 1rem;
+  transform: rotate(-50deg, -10px, 40px);
+}
+
+#appStartTimeResult .widget-legend circle {
+  cx: 3;
+  cy: -4;
+}
+
+#responseTime_chart .widget-legend circle {
+  cx: 3;
+  cy: -4;
+}
+
+
+/* 차트 dropshadow 처리 */
+
+#crash_chart .brush-line path {
+  filter: drop-shadow(0.4rem 0.4rem 0.4rem rgba(172, 170, 171, 0.8));
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  animation: ani 15s normal infinite;
+}
+
+@keyframes ani {
+  0% {
+    stroke-dashoffset: 100%; 
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
+
+#g-graph g path, #a-graph g path {
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(172, 170, 171, 0.2));
+}
+
+#g-grade g, #a-grade g {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(172, 170, 171, 0.1));  
+}
+
+#cpu_resource svg g .brush-bargauge > g rect,
+#memory_resource svg g .brush-bargauge > g rect,
+#network_resource svg g .brush-bargauge > g rect{
+    filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(172, 170, 171, 0.1));
+}
+
+#total_chart .brush-column path {
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(172, 170, 171, 0.4));
+}
+
+#total_chart svg .brush-line g path {
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(172, 170, 171, 0.8));
+}
+
+#review_grade svg .brush-line g path {
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(172, 170, 171, 0.8));
+}
+
+#cpu_chart svg .brush-line g path, #memory_chart svg .brush-line g path, #network_chart svg .brush-line g path {
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(172, 170, 171, 0.8));
+}
+
+#viewPerformanceReport svg .brush-line g path {
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(172, 170, 171, 0.8));
+}
+
+#responseTime_chart svg .brush-line g path {
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(172, 170, 171, 0.8));
+}
+
+#appStartTimeResult .brush-scatter ellipse {
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem rgba(172, 170, 171, 0.2));
+}

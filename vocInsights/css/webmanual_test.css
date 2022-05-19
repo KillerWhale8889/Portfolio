@@ -1,0 +1,308 @@
+/*******************************************************************
+ Web Manual Test 
+********************************************************************/
+
+#webManualTest .content-inner {
+    text-align: center;
+    position: relative;
+    min-height: 83vh;
+}
+
+#webManualTest .test-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 2rem 0 0rem 1rem;
+}
+
+#webManualTest .test-container aside {
+    width: 15%;
+    min-width: 23rem;
+    margin-right: 1%;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+#webManualTest aside .accordion .accordion-item .heading,
+#webManualTest aside .accordion .item .heading {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#webManualTest aside .accordion .accordion-item .heading img,
+#webManualTest aside .accordion .item .heading img {
+  margin-right: 0.5rem;
+  position: relative;
+  top: -0.1rem;
+}
+
+
+#webManualTest progress {
+  width: 100%;
+}
+
+#webManualTest .test-container .content {
+    width:100%;
+   
+}
+
+#webManualTest .accordion-item{
+  position: relative;
+  cursor:pointer;
+}
+#webManualTest .accordion-item.active .icon:before {
+  background: #000;
+}
+#webManualTest .accordion-item.active .icon:after {
+  width: 0;
+}
+#webManualTest .accordion-item .heading,
+#webManualTest .item .heading {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  padding: 1.5rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#webManualTest .accordion-item .heading:hover,
+#webManualTest .item .heading:hover {
+  color: #3366ff;
+}
+#webManualTest .accordion-item .heading:hover .icon:before, .accordion-item .heading:hover .icon:after {
+  background: #3366ff;
+}
+#webManualTest .accordion-item .icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+#webManualTest .accordion-item .icon:before, .accordion-item .icon:after {
+  content: '';
+  width: 1rem;
+  height: 0.2rem;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#webManualTest .accordion-item .icon:after {
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+  z-index: -1;
+}
+
+#webManualTest .accordion-item .content {
+  display: none;
+}
+
+#webManualTest .content {
+    width: 50%;
+    padding: 0;
+} 
+
+#webManualTest .detail-table-area {
+  height: 78vh;
+  min-height: 600px;
+  min-width: 500px;
+  position: relative;  
+}
+
+#webManualTest .detail-table-area .device-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#webManualTest .side-link {
+  margin-top: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 1.3rem 0;
+}
+
+#webManualTest .side-link:hover {
+  background-color: #3366ff;
+  transition: all .5s;
+}
+
+#webManualTest .side-link:hover ul li {
+  color: #fff;
+}
+
+#webManualTest .content .bottom-link {
+    height: 4rem;
+}
+
+#webManualTest .content .bottom-link li {
+    width: 50%;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#webManualTest .detail-table-flex {
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.buttons-container {
+    /* position: absolute; */
+    /* margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 395px;
+    height: 100px;
+    border-radius: 45px; */
+    /* background: #151515; */
+    /* box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.5); */
+  }
+  
+  .buttons-container  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttons-container  ul li {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 0.1rem;
+    padding: 0.8rem;
+    /* height: 48px; */
+    width: 5rem;
+    /* background: #202020; */
+    /* border-top: 1px solid #353535; */
+    box-shadow: 1px 0 10px rgb(221 221 221 / 70%);
+    transition: all 0.5s;
+  }
+
+  .buttons-container  ul li img {
+    width:1.8rem;
+    height: auto;
+  }
+  
+  .buttons-container  ul li:nth-of-type(1) {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .buttons-container  ul li:last-of-type {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+ 
+  .buttons-container  ul li {
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+#webManualTest .test-btn-detail {
+  padding: 0.5rem 1rem;
+}
+
+#webManualTest .test-btn-detail input[type="text"] {
+  width: 100%;
+  height: 2.4rem;
+  border: 0.1rem solid #dedede;
+  border-radius: 0.5rem;
+}
+
+#webManualTest .test-btn-detail input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid #dedede;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.5rem;
+  margin: 0;
+}
+
+#webManualTest .test-btn-detail .smtxt{
+  font-size: 1.4rem;
+}
+
+
+#webManualTest .test-btn-detail textarea {
+  width: 100%;
+  height: 6rem;
+  margin: 0 auto;
+  padding: 0.4rem;
+  border: none;
+  text-align: left;
+  font-size: 1.6rem;
+  resize: none;
+  white-space: pre-wrap;
+  font-family: 'noto Sans KR', sans-serif;
+  font-size: 1.2rem;
+  background-color: #efefef4d;
+}
+
+/* detail btn style*/
+
+
+.list-btn {
+  display: inline-block;
+  color: #fff;
+  border: 0.1rem solid #283646;
+  background: #283646;
+}
+
+.list-btn:hover {
+  background: #36485e;
+}
+
+.search-btn {
+  border: 0.1rem solid #dedede;
+  background: #fff;
+  width: 49%;
+  margin-top: 1rem;
+}
+
+.install-btn {
+  color: #fff;
+  border: 0.1rem solid #3366ff;
+  background: #3366ff;
+  width: 49%;
+  margin-top: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  color: #fff;
+  border: 0.1rem solid #3366ff;
+  background: #3366ff;
+}
+.pref-btn {
+  width: 49%;
+  color: #fff;
+  border: 0.1rem solid #3366ff;
+  background: #3366ff;
+}
+
+.uk-button-primary:hover {
+  background-color: #f2f2f2;
+  color: #fff
+}
+
+.uk-button-primary.uk-active,
+.uk-button-primary:active {
+  background-color: #fff;
+}
+
+
