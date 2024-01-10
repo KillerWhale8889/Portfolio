@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" class="light-theme">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- loader-->
+  <link href="assets/css/pace.min.css" rel="stylesheet" />
+  <script src="assets/js/pace.min.js"></script>
+
+  <!-- CSS Files -->
+  <link href="assets/css/remixicon.css" rel="stylesheet">
+  <link href="assets/css/reset.css" rel="stylesheet">
+  <link href="assets/css/dataTables.css" rel="stylesheet">
+  <link href="assets/css/index.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+  <!--Theme Styles-->
+  <link href="assets/css/dark-theme.css" rel="stylesheet" />
+
+  <title>ONYSOFT REMOTE LAB</title>
+</head>
+
+<body>
+
+
+  <!--start wrapper-->
+  <div class="wrapper wrapper-main contact-wrapper">
+
+    <!--start top header-->
+    <header class="top-header">
+      <nav class="navbar navbar-expand-lg container-fluid">
+        <a class="logo-img" href="index.html">
+          <!-- <img src="assets/images/logo-icon.png" alt="어니소프트 로고"> -->
+        </a>
+        <div class="collapse navbar-collapse ms-center" id="navbarSupportedContent">            
+          <ul class="navbar-nav align-items-center">
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <div class="">
+                  About
+                </div>
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="remote.html">
+                <div class="mm-active">
+                  Remote Test Lab
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">
+                <div class="">
+                  FAQs
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">
+                <div class="">
+                  Contact
+                </div>
+              </a>
+            </li>
+          </ul>  
+        </div>
+        <div class="top-navbar-right">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link dark-mode-icon" href="javascript:;">
+                <div class="mode-icon">
+                  <ion-icon name="moon"></ion-icon>                 
+                </div>
+              </a>
+            </li>   
+            <li class="nav-item dropdown dropdown-user-setting">              
+              <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown">
+                <div class="d-flex flex-row align-items-center gap-2">
+                  <img src="assets/images/avatars/06.png" alt="" class="rounded-circle" width="30" height="30">
+                  <div class="">
+                    <small class="mb-0 dropdown-user-designation text-secondary">user1234@test.com</small>
+                  </div>
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="javascript:;">
+                    <div class="d-flex flex-row align-items-center gap-2">
+                      <img src="assets/images/avatars/06.png" alt="" class="rounded-circle" width="54" height="54">
+                      <div class="">
+                        <h6 class="mb-0 dropdown-user-name">USER123</h6>
+                        <small class="mb-0 dropdown-user-designation text-secondary">user1234@test.com</small>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item" href="reservation.html">
+                    <div class="d-flex align-items-center">
+                      <div class="dropdown-icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                      </div>
+                      <div class="ms-3"><span>My Test</span></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item resetPw-open" href="javascript:resetPw();">
+                    <div class="d-flex align-items-center">
+                      <div class="dropdown-icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                      </div>
+                      <div class="ms-3">
+                        <span>Change Password</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;">
+                    <div class="d-flex align-items-center">
+                      <div class="dropdown-icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                      </div>
+                      <div class="ms-3"><span>Logout</span></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+    <!--end top header-->
+
+
+    <!-- start page content wrapper-->
+    <div class="page-content-wrapper">
+      <!-- start page content-->
+      <div class="page-content">
+
+        <!--start breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="breadcrumb-title pe-3">Contact</div>
+        </div>
+        <!--end breadcrumb-->
+
+        <div class="row">
+          <div class="col-xl-12 mx-auto">   
+            <h6 class="text-uppercase">2nd floor, 21, Duteopbawi-ro, Yongsan-gu, Seoul, Republic of Korea</h6>
+            <hr/>
+            <div class="card">
+              <div class="card-body">
+                <div id="marker-map" class="gmaps">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.4035888343087!2d126.9718518763613!3d37.54555412533025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ed5166df41%3A0x9a05243698804d59!2z7Ja064uI7Lu0IOyjvOyLne2ajOyCrA!5e0!3m2!1sko!2skr!4v1697014824268!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end row-->
+
+      </div>
+      <!-- end page content-->
+    </div>
+    <!--end page content wrapper-->
+
+
+    <!--start footer-->
+    <footer class="footer">
+      <div class="footer-text">
+        Copyright © 2023.
+      </div>
+    </footer>
+    <!--end footer-->
+
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-dark btn-icon landing-back-top" id="back-to-top">
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+    <!--end back-to-top-->
+
+  </div>
+  <!--end wrapper-->
+
+
+  <!-- JS Files-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/default.js"></script>
+  <script src="assets/js/index.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  
+  <!--plugins--> 
+  <script src="assets/js/jquery.dataTables.min.js"></script>
+  <script src="assets/js/remote.js"></script>
+
+
+</body>
+
+</html>
