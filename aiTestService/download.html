@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>AI Test Service</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+
+ 
+</head>
+
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              AI TEST SERVICE
+            </span>
+          </a>     
+
+          <div class="navbar-down">
+            <ul class="btn">
+              <li class="language"><a href="download_en.html" class="en">EN</a></li>
+               <li class="down_btn"><a href="download.html">테스트 시작하기</a></li>
+               <!-- <li><a class="signin" href="#0">Sign in</a></li>                -->
+
+            </ul>
+         </div>
+
+         <div class="navbar-collapse" id="">
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <a href="index.html">HOME</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="faq.html">FAQ</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+        </nav>
+
+
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- login form -->
+    <div class="user-modal">
+      <div class="user-modal-container">
+        <ul class="switcher">
+          <li><a href="#0">Sign in</a></li>
+          <li><a href="#0">New account</a></li>
+        </ul>
+  
+        <div id="login">
+          <form class="form">
+            <p class="fieldset">
+              <label class="image-replace email" for="signin-email">E-mail</label>
+              <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+              <span class="error-message">An account with this email address does not exist!</span>
+            </p>
+  
+            <p class="fieldset">
+              <label class="image-replace password" for="signin-password">Password</label>
+              <input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Password">
+              <a href="#0" class="hide-password">Show</a>
+              <span class="error-message">Wrong password! Try again.</span>
+            </p>
+  
+            <p class="fieldset">
+              <input type="checkbox" id="remember-me" checked>
+              <label for="remember-me">Remember me</label>
+            </p>
+  
+            <p class="fieldset">
+              <input class="full-width" type="submit" value="Login">
+            </p>
+          </form>
+          
+          <p class="form-bottom-message"><a href="#0">Forgot your password?</a></p>
+          <!-- <a href="#0" class="close-form">Close</a> -->
+        </div>
+  
+        <div id="signup">
+          <form class="form">
+            
+            <p class="fieldset">
+              <label class="image-replace username" for="signup-username">Username</label>
+              <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+              <span class="error-message">Your username can only contain numeric and alphabetic symbols!</span>
+            </p>  
+            
+            <p class="fieldset">
+              <label class="image-replace email" for="signup-email">E-mail</label>
+              <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+              <a href="#0" class="hide-password">Send</a>
+              <span class="error-message">Enter a valid email address!</span>
+            </p>
+
+            <p class="fieldset">
+              <label class="image-replace email" for="signup-email">E-mail</label>
+              <input class="full-width has-padding has-border" id="signup-email" type="text" placeholder=" ">
+              <a href="#0" class="hide-password">Submit</a>
+              <span class="error-message">Enter a valid email address!</span>
+            </p>
+  
+            <p class="fieldset">
+              <label class="image-replace password" for="signup-password">Password</label>
+              <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password">
+              <a href="#0" class="hide-password">Show</a>
+              <span class="error-message">Your password has to be at least 6 characters long!</span>
+            </p>
+
+            <p class="fieldset">
+              <label class="image-replace password" for="signup-password">Password</label>
+              <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password">
+              <a href="#0" class="hide-password">Show</a>
+              <span class="error-message">Your password has to be at least 6 characters long!</span>
+            </p>
+  
+            <p class="fieldset">
+              <input type="checkbox" id="accept-terms">
+              <label for="accept-terms">I agree to the <a class="accept-terms" href="#0">Terms</a></label>
+            </p>
+  
+            <p class="fieldset">
+              <input class="full-width has-padding" type="submit" value="Create account">
+            </p>
+          </form>
+  
+          <!-- <a href="#0" class="cd-close-form">Close</a> -->
+        </div>
+  
+        <div id="reset-password">
+          <p class="form-message">Lost your password? Please enter your email address.</br> You will receive a link to create a new password.</p>
+  
+          <form class="form">
+            <p class="fieldset">
+              <label class="image-replace email" for="reset-email">E-mail</label>
+              <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+              <span class="error-message">An account with this email does not exist!</span>
+            </p>
+  
+            <p class="fieldset">
+              <input class="full-width has-padding" type="submit" value="Reset password">
+            </p>
+          </form>
+  
+          <p class="form-bottom-message"><a href="#0">Back to log-in</a></p>
+        </div>
+        <a href="#0" class="close-form">Close</a>
+      </div>
+    </div>
+    <!-- end login form -->
+  </div>
+
+  <!-- feature section -->
+  <section class="feature_section layout_padding2 layout_padding3">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          테스트 시작하기
+        </h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row testing_cau">
+        <div class="col-md-12">
+          <div>
+           
+            <h4>테스트를 시작하기 전에 </h4>
+            <p>
+              mTworks Tool을 사용하기 위해서는 pc에 Java 프로그램이 필수 설치되어야 합니다. <br/>
+              Java 미설치 시 아래와 같은 알림 메세지가 나타납니다.
+            </p>
+
+            <div class="msg">
+              <div class="err_file"></div>
+              <div class="err_txt">
+              <p>                
+                ※ 이 파일을 열 수 없습니다. <br/>
+                <p><b>mTworks.exe</b> </p> 
+                이 파일을 열수있는 프로그램을 선택해야 합니다. 온라인에서 해당 파일을 열 수 있는 프로그램을 자동으로 검색하거나 컴퓨터에 설치되어 있는 프로그램 목록 중에서 사용자가 직접 선택할 수 있습니다.
+
+              </p>
+              </div>
+           </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+      
+        <div class="win_box row">
+          <!-- <h5>Windowns용 다운로드</h5>  -->
+          <div class="col-md-6">
+            <div class="box">
+              <div class="head-box">
+                <h6>
+                  Windows용 Java 다운로드
+                </h6>
+              </div>
+              <div class="detail-box">
+                <p>
+                  Java 다운로드 <br/>
+                  버전 : 1.8.191 / OS : Windows
+                </p>
+                <a href="">
+                  Windows JRE 다운로드
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="box">
+              <div class="head-box">
+                <h6>
+                  MAC용 Java 다운로드
+                </h6>
+              </div>
+              <div class="detail-box">
+                <p>
+                  Java 다운로드 <br/>
+                  버전 : 1.8.191 / OS : MAC
+                </p>
+                <a href="">
+                  MAC JRE 다운로드
+                </a>
+              </div>
+  
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row testing_cau">
+          <div class="col-md-12">
+            <div>
+             
+              <h4>실행파일 다운로드 </h4>
+              <p>
+                Java 다운로드 및 설치 > mTworks 실행파일 다운로드 > 실행 > 로그인 > 테스트 시작 <br/>
+※ MAC용은 압축파일 해제 후 더블클릭하시면 실행됩니다. <br/>
+※ macOS Java 설치 경로 : Finder open > 이동 > 폴더로이동 > /Library/Java/JavaVirtualMachines
+  
+  
+  
+              </p>
+          
+            </div>
+          </div>
+  
+  
+        </div>
+      </div>
+      
+      <div class="container">
+
+      <div class="mac_box row">               
+        <!-- <h5>MAC용 다운로드</h5>  -->
+        <div class="col-md-6">
+          <div class="box">
+            <div class="head-box">
+              <h6>
+                Windows용 mTworks 다운로드
+              </h6>
+            </div>
+            <div class="detail-box">
+              <p>
+                mTworks 다운로드<br/> 
+                Windows 7 이상
+              </p>
+              <a href="">
+                Windows 실행파일 다운로드
+              </a>
+            </div>
+
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="box">
+            <div class="head-box">
+              <h6>
+                MAC용 mTworks 다운로드
+              </h6>
+            </div>
+            <div class="detail-box">
+              <p>
+                mTworks 다운로드<br/> 
+                MAC Sierra 이상
+              </p>
+              <a href="">
+                MAC 실행파일 다운로드
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+  </section>
+
+  <!-- end feature section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding-top">
+    <div class="info_logo-box">
+      <h2>
+        AI TEST SERVICE
+      </h2>
+    </div>
+    <div class="container layout_padding2">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>
+            Product
+          </h5>
+          <p>
+            AI TEST SERVICE
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5>
+            COMPANY
+          </h5>
+          <ul>
+            <li>
+              <a href="">
+                ONYSOFT
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>
+            Contact
+          </h5>
+          <p>
+            서울특별시 용산구 두텁바위로 21, 2층
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- end info section -->
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; All Rights Reserved.
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/sign.js"></script> 
+  <script type="text/javascript" src="js/backend-bundle.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>  
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>

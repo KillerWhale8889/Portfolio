@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>AI Test Service</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+
+ 
+</head>
+
+
+<body class="sub_page ai_reserve">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index_en.html">
+            <span>
+              AI TEST SERVICE
+            </span>
+          </a>    
+          
+          <div class="navbar-down">
+            <ul class="btn">
+              <li class="language"><a href="contact.html" class="ko">KO</a></li>
+               <li class="down_btn"><a href="download_en.html">Get Started</a></li>
+               <!-- <li><a class="signin" href="#0">Logout</a></li>     -->
+               <li class="nav-item nav-icon dropdown profile-content">
+                    <a href="#" class="search-toggle dropdown-toggle user-profile" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/04.png" class="img-fluid" alt="user">
+                    </a>
+                  <div class="dropdown-menu text-center profile-detail" aria-labelledby="dropdownMenuButton">     
+                      <div class=" p-3 user-profile">
+                          <img src="images/04.png" class="img-fluid" alt="user">
+                          <h5 class="mb-1 mt-2">User1234</h5>
+                          <p class="mb-0 mt-1">user1234@aabbcc.com</p>
+                          <div class="d-flex align-items-center justify-content-center mt-2">
+                              <a href="aireserve_en.html" class="btn border mr-1">Project</a>
+                              <a href="index_en.html" class="btn border">Log out</a>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+
+            </ul>
+         </div>
+
+         <div class="navbar-collapse" id="">
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <a href="index_en.html">HOME</a>
+              <a href="pricing_en.html">Pricing</a>
+              <a href="faq_en.html">FAQ</a>
+              <a href="contact_en.html">Contact</a>
+            </div>
+          </div>
+        </div>
+        </nav>
+
+        <div class="user-modal">
+          <div class="user-modal-container">
+            Logout
+            
+              <form class="form">
+                <p class="fieldset">
+                  <input class="full-width has-padding" type="submit" value="Logout">
+                </p>
+              </form>
+          
+            <a href="#0" class="close-form">Close</a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+
+  <!-- section -->
+  <section class="ai_section">  
+
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab-1" role="tablist">
+      <li class="nav-item">
+         <a class="nav-link active" id="management-tab-justify" data-toggle="tab" href="#management" role="tab" aria-controls="management" aria-selected="true">Manage Reservations
+        </a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" id="report-tab-justify" data-toggle="tab" href="#report" role="tab" aria-controls="report" aria-selected="false">Report
+        </a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" id="reservation-tab-justify" data-toggle="tab" href="#reservation" role="tab" aria-controls="reservation" aria-selected="false">Scheduling AI Tests
+        </a>
+      </li>
+   </ul>
+
+   <div class="tab-content" id="myTabContent-3">
+      <div class="tab-pane fade show active" id="management" role="tabpanel" aria-labelledby="management-tab-justify">  
+        <div id="table" class="table-editable">    
+          <table id="datatable" class="table data-table table-striped table-bordered text-center" >
+            <colgroup>
+              <col width="5%">
+              <col width="45%">
+              <col width="20%">
+              <col width="8%">
+              <col width="15%">
+              <col width="7%">
+            </colgroup>
+
+            <thead>
+              <tr>
+                  <th>No.</th>
+                  <th>Title</th>
+                  <th>Device</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>Test 1 </td>
+                  <td>G4 ThinkQ</td>
+                  <td>Running</td>
+                  <td>2023/04/25 13:50</td>
+                  <td><span class="table-remove"><button type="button"
+                    class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Test 2 </td>
+                <td>iPhone 6s</td>
+                <td>Finished</td>
+                <td>2023/06/29 17:00</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Test 3 </td>
+                <td>Galaxy S23 Ultra</td>
+                <td>Finished</td>
+                <td>2022/01/15 10:30</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Test 111 </td>
+                <td>G4 ThinkQ</td>
+                <td>Running</td>
+                <td>2023/04/25 13:50</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Test 222 </td>
+                <td>iPhone 6s</td>
+                <td>Finished</td>
+                <td>2023/06/29 17:00</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Test 333 </td>
+                <td>Galaxy S23 Ultra</td>
+                <td>Finished</td>
+                <td>2022/01/15 10:30</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Test 441 </td>
+                <td>G4 ThinkQ</td>
+                <td>Running</td>
+                <td>2023/04/25 13:50</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Test 255 </td>
+                <td>iPhone 6s</td>
+                <td>Finished</td>
+                <td>2023/06/29 17:00</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Test 366 </td>
+                <td>Galaxy S23 Ultra</td>
+                <td>Finished</td>
+                <td>2022/01/15 10:30</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>  
+              <tr>
+                <td>10</td>
+                <td>Test 771 </td>
+                <td>G4 ThinkQ</td>
+                <td>Running</td>
+                <td>2023/04/25 13:50</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Test 288 </td>
+                <td>iPhone 6s</td>
+                <td>Finished</td>
+                <td>2023/06/29 17:00</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Test 39 </td>
+                <td>Galaxy S23 Ultra</td>
+                <td>Finished</td>
+                <td>2022/01/15 10:30</td>
+                <td><span class="table-remove"><button type="button"
+                  class="btn bg-danger-light btn-rounded btn-sm my-0">Remove</button></span></td>
+              </tr>  
+            
+
+            </table>    
+        </div>    
+      </div>
+
+      <div class="tab-pane fade" id="report" role="tabpanel" aria-labelledby="report-tab-justify">
+        <div id="table" class="table-editable">    
+          <table id="datatable" class="table data-table table-striped table-bordered text-center" >
+            <colgroup>
+              <col width="5%">
+              <col width="50%">
+              <col width="20%">
+              <col width="15%">
+              <col width="10%">
+            </colgroup>
+
+            <thead>
+              <tr>
+                  <th>No.</th>
+                  <th>Title</th>
+                  <th>Device</th>
+                  <th>Date</th>
+                  <th>Report</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>Test 1 </td>
+                  <td>G4 ThinkQ</td>
+                  <td>2011/04/25 13:56</td>
+                  <td>
+                    <span class="iq-icons-list">
+                      <button type="button" class="btn bg-primary-light btn-rounded btn-sm-2 my-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5A3.375 3.375 0 006.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0015 2.25h-1.5a2.251 2.251 0 00-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 00-9-9z" />
+                        </svg>
+                      </button>
+                    </span>
+                </td>
+              </tr>              
+            </table>    
+        </div> 
+      </div>
+
+      <div class="tab-pane fade" id="reservation" role="tabpanel" aria-labelledby="reservation-tab-justify">
+       <!-- Wrapper Start -->
+        <div class="wrapper">
+          <div class="iq-sidebar  sidebar-default">
+            <div class="side-menu-bt-sidebar">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-secondary wrapper-menu" width="30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </div>
+
+              <div class="data-scrollbar" data-scroll="1">
+                  <nav class="iq-sidebar-menu">
+                      <ul id="iq-sidebar-toggle" class="side-menu">
+
+                        <li class="px-3 pt-2 pb-2 sidebar-layout">
+                          <span class="text-uppercase font-weight-bold">Device List</span>
+                        </li>
+
+                        <li class="sidebar-layout px-3">
+                          <div class="list-group">
+                            <div class="list-group-item list-group-item-action custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
+                              <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-1" checked="">
+                              <label class="custom-control-label" for="customCheck-1">
+                                <span> Galaxy Note 23 Ultra</span> 
+                              </label>
+                            </div>
+                            <div class="list-group-item list-group-item-action custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
+                              <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-2" checked="">
+                              <label class="custom-control-label" for="customCheck-2">
+                                <span> iPhone 14 Pro Max</span> 
+                              </label>
+                            </div>
+                            <div class="list-group-item list-group-item-action custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
+                              <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-3" checked="">
+                              <label class="custom-control-label" for="customCheck-3">
+                                <span> Device 3</span> 
+                              </label>
+                            </div>
+                            <div class="list-group-item list-group-item-action custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
+                              <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-4" checked="">
+                              <label class="custom-control-label" for="customCheck-4">
+                                <span> Device 4</span> 
+                              </label>
+                            </div>
+                            <div class="list-group-item list-group-item-action custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
+                              <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-5" checked="">
+                              <label class="custom-control-label" for="customCheck-5">
+                                <span> Device 5</span> 
+                              </label>
+                            </div>
+                            <div class="list-group-item list-group-item-action custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
+                              <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-6" checked="">
+                              <label class="custom-control-label" for="customCheck-6">
+                                <span> Device 6</span> 
+                              </label>
+                            </div>
+                        </div>
+
+                        </li>
+
+                        <li class="px-3 pt-3 pb-2 sidebar-layout">
+                          <span class="text-uppercase font-weight-bold">Title & APK</span>
+                        </li>
+
+                        <li class="sidebar-layout px-3">  
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputText1" placeholder="Title">
+                            </div>                    
+                        </li>
+
+                        <li class="sidebar-layout px-3">
+                          <form id="file-upload-form" class="uploader-file">
+                            <input id="file-upload" type="file" name="fileUpload" accept="/*" />
+                            <label id="file-drag">
+                              <img id="file-image" src="#" alt="Preview" class="hidden">
+                              <span id="start-one">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                  </svg>
+            
+                                  <span class="d-block">Select a file or drag here.</span>
+                                  <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                              </span>
+                              <span id="response" class="hidden">
+                              <span id="messages"></span>
+                                  <progress class="progress" id="file-progress" value="0">
+                                      <span>0</span>%
+                                  </progress>
+                              </span>
+                            </label>
+                        </form>
+
+                        </li>
+
+                        <li class="sidebar-layout px-3">
+                          <span class="btn btn-primary reserve">Reservation</span>
+                        </li>
+
+                        
+
+                      </ul>
+                  </nav>
+                  <div class="pt-1 pb-1"></div>
+              </div>
+          </div>
+
+          <div class="content-page">
+            <div class="container-fluid">
+              <h2> Device Realtime Area</h2>
+              <div class="frame100">
+                <div class="load-container">                  
+                  <p class="no-reserve">There is no reservation.<p>
+                  <div class="cssload-box-loading"></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+   </div>
+
+  </section>
+  <!-- end section -->
+
+  
+<!-- footer section -->
+<section class="container-fluid footer_section">
+  <p>
+    &copy; All Rights Reserved.
+  </p>
+</section>
+<!-- footer section -->
+
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/sign.js"></script> 
+<script type="text/javascript" src="js/backend-bundle.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>  
+  
+
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>
